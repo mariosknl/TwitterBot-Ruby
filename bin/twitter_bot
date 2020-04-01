@@ -1,5 +1,14 @@
 #!/usr/bin/env ruby
 require 'twitter'
-require '../lib/checks'
+require_relative '../lib/checks'
+require 'rufus-scheduler'
 
 my_retweet_bot = RetweetBot.new
+
+scheduler = Rufus::Scheduler.new
+
+scheduler.every '10m' do
+    my_retweet_bot.retweet_method
+end
+
+scheduler.join
