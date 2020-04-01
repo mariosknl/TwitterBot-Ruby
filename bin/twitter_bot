@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'twitter'
+require '../lib/checks'
+
+my_retweet_bot = RetweetBot.new
