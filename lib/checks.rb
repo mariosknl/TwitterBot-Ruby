@@ -4,39 +4,34 @@ require 'dotenv'
 Dotenv.load
 
 class RetweetBot
+
   def initialize
     @client = Twitter::REST::Client.new do |config|
-    config.consumer_key         = Env["CONSUMER_KEY"]
-    config.consumer_secret      = Env["CONSUMER_SECRET"]
-    config.access_token         = Env["ACCESS_TOKEN"]
-    config.access_token_secret  = Env["ACCESS_TOKEN_SECRET"]
+    config.consumer_key         = ENV["CONSUMER_KEY"]
+    config.consumer_secret      = ENV["CONSUMER_SECRET"]
+    config.access_token         = ENV["ACCESS_TOKEN"]
+    config.access_token_secret  = ENV["ACCESS_TOKEN_SECRET"]
+    @arr = []
     end
   end
+  
 
-  def retweet_method
-    topic = "#tsandpipers_88"
-    my_followers = @client.follower_ids
-
-    my_followers.each do |follower_id|
-      @client.user_timeline(follower_id, result_type: "recent").each do |tweet|
-        if tweet.text.include? topic
-          p @client.retweet(tweet.id)
-          p @client.retweet(tweet.id).class
-          @client.retweet(tweet.id)
+    def follow_method
+      topic = "#tsandpipers_88"
+    
+        x = @client.search(topic, result_type: "recent").take(10)
+        @arr = x
+        @arr.each do |i|
+          @client.follow(i.user.id)
         end
+    end
+
+    def retweet_method
+      @arr.each do |tweet|
+        @client.retweet(tweet)
       end
     end
-  end
 end
 
-def follow_user
-  topic = "#tsandpipers_88"
-    @client.search(topic, result_type: "recent").each do |user|
-      if tweet.text.include? topic
-        p @client.follow(user.id)
-        p @client.follow(user.id).class
-        @client.follow(user.id)
-      end
-    end
-end
+
 

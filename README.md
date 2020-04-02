@@ -1,6 +1,6 @@
 # Capstone Project TwitterBot (#tsandpipers_88)
 This is a Twitter bot created in Ruby.
-It's purpose is to retweet team's sandpipers tweet and also help making connections with other Microverse students that use #tsandpipers_88.
+Its purpose is to retweet tweets with #tsandpipers_88 and also help to make connections with other Microverse students on Twitter.
 
 # Built with
  - Ruby
