@@ -9,3 +9,5 @@ gem 'rubocop'
 gem 'twitter'
 
 gem 'rufus-scheduler'
+
+gem 'dotenv'

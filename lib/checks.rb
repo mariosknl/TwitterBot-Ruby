@@ -1,13 +1,15 @@
 require 'rubygems'
 require 'twitter'
+require 'dotenv'
+Dotenv.load
 
 class RetweetBot
   def initialize
     @client = Twitter::REST::Client.new do |config|
-    config.consumer_key         = "iryzxTMBh6SWRYXIoD7g1v7lc"
-    config.consumer_secret      = "femD7YJI6VpiYiuNpsf4Um5Qp2mbAw6YwjNBBs9IKkVV6kU41k"
-    config.access_token         = "1245296390659604480-C8z2A4Vk2FowZqmrKFMF78CGHYweNM"
-    config.access_token_secret  = "FDeU6xjfxtGJkgY4zx6yVECmGWDS2wLrLlEMdeJMm8BEy"
+    config.consumer_key         = Env["CONSUMER_KEY"]
+    config.consumer_secret      = Env["CONSUMER_SECRET"]
+    config.access_token         = Env["ACCESS_TOKEN"]
+    config.access_token_secret  = Env["ACCESS_TOKEN_SECRET"]
     end
   end
 
