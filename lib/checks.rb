@@ -13,7 +13,7 @@ class RetweetBot
     end
   end
 
-  def retweet_method 
+  def retweet_method
     topic = "#tsandpipers_88"
     my_followers = @client.follower_ids
 
@@ -28,3 +28,15 @@ class RetweetBot
     end
   end
 end
+
+def follow_user
+  topic = "#tsandpipers_88"
+    @client.search(topic, result_type: "recent").each do |user|
+      if tweet.text.include? topic
+        p @client.follow(user.id)
+        p @client.follow(user.id).class
+        @client.follow(user.id)
+      end
+    end
+end
+

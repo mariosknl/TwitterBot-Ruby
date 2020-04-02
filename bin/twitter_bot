@@ -7,7 +7,7 @@ my_retweet_bot = RetweetBot.new
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.every '10m' do
+scheduler.every '1m' do
     my_retweet_bot.retweet_method
 end
 
