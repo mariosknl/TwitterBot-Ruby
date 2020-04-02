@@ -3,15 +3,17 @@ require 'twitter'
 require_relative '../lib/checks'
 require 'rufus-scheduler'
 
+
 scheduler = Rufus::Scheduler.new
 
 def run
   my_retweet_bot = RetweetBot.new
-  my_retweet_bot.retweet_method
   my_retweet_bot.follow_method
+  my_retweet_bot.retweet_method
 end
+run
 
-scheduler.every '1m' do
+scheduler.every '8h' do
   run
 end
 scheduler.join

@@ -17,20 +17,21 @@ class RetweetBot
   
 
     def follow_method
+    
       topic = "#tsandpipers_88"
     
         x = @client.search(topic, result_type: "recent").take(10)
         @arr = x
         @arr.each do |i|
-          @client.follow(i.user.id)
+          @client.follow(i.user.id) unless i.user.screen_name == 'TSandpipers'
         end
     end
-
-    def retweet_method
-      @arr.each do |tweet|
-        @client.retweet(tweet)
+      
+      def retweet_method 
+        @arr.each do |tweet|
+          @client.retweet(tweet)
+        end
       end
-    end
 end
 
 
