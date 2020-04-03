@@ -11,7 +11,7 @@ def run
   my_retweet_bot.follow_method
   my_retweet_bot.retweet_method
 end
-run
+print run
 
 scheduler.every '8h' do
   run
