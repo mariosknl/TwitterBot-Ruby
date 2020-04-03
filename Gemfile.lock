@@ -5,7 +5,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
     buftok (0.2.0)
-    byebug (11.1.1)
     concurrent-ruby (1.1.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -36,6 +35,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     multipart-post (2.1.1)
     naught (1.1.0)
+    oauth (0.5.4)
     parallel (1.19.1)
     parser (2.7.0.5)
       ast (~> 2.4.0)
@@ -68,6 +68,8 @@ GEM
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
+    twurl (0.9.5)
+      oauth (~> 0.4)
     tzinfo (2.0.1)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -79,11 +81,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   dotenv
   rubocop
   rufus-scheduler
   twitter
+  twurl
 
 BUNDLED WITH
    2.1.4
