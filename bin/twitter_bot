@@ -3,7 +3,6 @@ require 'twitter'
 require_relative '../lib/checks'
 require 'rufus-scheduler'
 
-
 scheduler = Rufus::Scheduler.new
 
 def run
