@@ -11,3 +11,5 @@ gem 'rufus-scheduler'
 gem 'dotenv'
 
 gem 'twurl'
+
+gem 'rspec'

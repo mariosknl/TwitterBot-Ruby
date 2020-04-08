@@ -10,21 +10,22 @@ class RetweetBot
       config.consumer_secret = ENV['CONSUMER_SECRET']
       config.access_token = ENV['ACCESS_TOKEN']
       config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
-      @arr = []
     end
+    @arr = []
   end
 
-  def follow_method
-    topic = '#tsandpipers_88'
+  def check_tweets
+    @arr = @client.search('#tsandpipers_88', result_type: 'recent').take(10)
+  end
 
-    x = @client.search(topic, result_type: 'recent').take(10)
-    @arr = x
+
+  def twitter_bot_follow
     @arr.each do |i|
       @client.follow(i.user.id) unless i.user.screen_name == 'TSandpipers'
     end
   end
 
-  def retweet_method
+  def twitter_bot_retweet
     @arr.each do |tweet|
       @client.retweet(tweet)
     end

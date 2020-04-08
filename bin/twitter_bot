@@ -6,13 +6,14 @@ require 'rufus-scheduler'
 scheduler = Rufus::Scheduler.new
 
 def run
-  my_retweet_bot = RetweetBot.new
-  my_retweet_bot.follow_method
-  my_retweet_bot.retweet_method
+  twitter_bot = RetweetBot.new
+  twitter_bot.check_tweets
+  twitter_bot.twitter_bot_follow
+  twitter_bot.twitter_bot_retweet
 end
 print run
 
-scheduler.every '10m' do
+scheduler.every '5s' do
   run
 end
 scheduler.join

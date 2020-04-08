@@ -1,6 +1,16 @@
 # Capstone Project TwitterBot (#tsandpipers_88)
 This is a Twitter bot created in Ruby.
-Its purpose is to retweet tweets with #tsandpipers_88 and also help to make connections with other Microverse students on Twitter.
+Its purpose is to retweet tweets with #tsandpipers_88 and also help to make connections with other Microverse students on Twitter. 
+
+# Installation process
+- Clone the repository
+- Create developer account on Twitter
+- Create an app
+- GET API Keys
+- Use the template env_sample and replace it with your API Keys
+- Run twitter_bot in your terminal
+- You can change the hashtag with the one you want. You have to go to the checks.rb file at line 18 and replace the hashtag value. Also, 
+  you must replace with your account name in line 24 inside the quotes. 
 
 # Built with
  - Ruby
