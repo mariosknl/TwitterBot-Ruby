@@ -18,7 +18,6 @@ class RetweetBot
     @arr = @client.search('#tsandpipers_88', result_type: 'recent').take(10)
   end
 
-
   def twitter_bot_follow
     @arr.each do |i|
       @client.follow(i.user.id) unless i.user.screen_name == 'TSandpipers'
