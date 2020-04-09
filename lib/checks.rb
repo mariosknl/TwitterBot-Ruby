@@ -15,7 +15,7 @@ class RetweetBot
   end
 
   def check_tweets
-    @arr = @client.search('#tsandpipers_88', result_type: 'recent').take(1)
+    @arr = @client.search('#tsandpipers_88', result_type: 'recent').take(15)
   end
 
   def twitter_bot_follow
@@ -26,7 +26,7 @@ class RetweetBot
 
   def twitter_bot_retweet
     @arr.each do |tweet|
-      @client.retweet(tweet.id)
+    @client.retweet(tweet.id)
     end
   end
 end
