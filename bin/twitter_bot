@@ -13,7 +13,7 @@ def run
 end
 print run
 
-scheduler.every '5s' do
+scheduler.every '10m' do
   run
 end
 scheduler.join
