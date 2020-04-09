@@ -30,4 +30,3 @@ class RetweetBot
     end
   end
 end
-
