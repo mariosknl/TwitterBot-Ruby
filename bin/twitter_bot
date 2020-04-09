@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+require 'twitter'
+require_relative '../lib/checks'
+require 'rufus-scheduler'
+
+scheduler = Rufus::Scheduler.new
+
+def run
+  twitter_bot = RetweetBot.new
+  twitter_bot.check_tweets
+  twitter_bot.twitter_bot_follow
+  twitter_bot.twitter_bot_retweet
+end
+print run
+
+scheduler.every '10m' do
+  run
+end
+scheduler.join
