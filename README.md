@@ -43,3 +43,4 @@ Give a ⭐️ if you like this project!
 - John Mettraux (https://github.com/jmettraux/rufus-scheduler)
 - [Marian Cristu](https://github.com/mariancristu)
 - [Eduardo Cruz](https://github.com/EdCrux)
+- Twitter Developers Team
