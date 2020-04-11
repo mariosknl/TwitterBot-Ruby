@@ -13,3 +13,5 @@ gem 'dotenv'
 gem 'twurl'
 
 gem 'rspec'
+
+gem 'puma'
