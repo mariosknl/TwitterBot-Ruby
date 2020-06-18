@@ -25,7 +25,7 @@ Its purpose is to retweet tweets with #tsandpipers_88 and also help to make conn
 - Github: [@mariosknl](https://github.com/mariosknl)
 - Twitter: [@mariosknl](https://twitter.com/MariosKnl)
 - Linkedln: [marios-kanellopoulos](https://www.linkedin.com/in/marios-kanellopoulos-a99332181/)
-- [![Mariosknl is available for hire!](http://hireable.me/mariosknl)](http://hireable.me/p/mariosknl)
+- Portfolio: [marios-kanellopoulos](https://marioskanellopoulos.com/)
 
 # 🤝 Contributing
 Contributions, issues and feature requests are welcome!
